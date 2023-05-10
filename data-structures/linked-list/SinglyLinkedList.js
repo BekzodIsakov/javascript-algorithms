@@ -29,6 +29,10 @@ class LinkedList {
     return this.head?.value ?? null;
   }
 
+  getTail() {
+    return this.tail?.value ?? null;
+  }
+
   push(value) {
     const node = new Node(value);
     if (!this.head) {

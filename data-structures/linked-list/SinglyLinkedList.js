@@ -1,4 +1,3 @@
-// Linked list
 class Node {
   constructor(value) {
     this.value = value;
@@ -22,6 +21,14 @@ class LinkedList {
     }
   }
 
+  size() {
+    return this.length;
+  }
+
+  getHead() {
+    return this.head?.value ?? null;
+  }
+
   push(value) {
     const node = new Node(value);
     if (!this.head) {
@@ -36,6 +43,5 @@ class LinkedList {
   }
 }
 
-const linkedList = new LinkedList([0, 1, '']);
-console.log(linkedList.push('🥑'));
-console.log(linkedList);
+const linkedList = new LinkedList();
+console.log(linkedList.getHead());
